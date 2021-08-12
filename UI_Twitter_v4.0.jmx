@@ -29,7 +29,7 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="path_chromdriver" elementType="Argument">
               <stringProp name="Argument.name">path_chromdriver</stringProp>
-              <stringProp name="Argument.value">D:\Automation\ESB BRIMO\chromedriver_win32\chromedriver_win32\chromedriver.exe</stringProp>
+              <stringProp name="Argument.value">D:\chromedriver_win32\chromedriver_win32\chromedriver.exe</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -753,7 +753,7 @@ var writeimages = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react
 writeimages.click();
 //java.lang.Thread.sleep(50000);
 wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div[3]/div/span/span&apos;)));
-//writeimages.sendKeys([&apos;D:\\AvanaIndonesia\\Indonesia_Large_Flag_20cmx15cm.png&apos;]);
+//writeimages.sendKeys([&apos;D:\\Indonesia\\Indonesia_Large_Flag_20cmx15cm.png&apos;]);
 
 
 
