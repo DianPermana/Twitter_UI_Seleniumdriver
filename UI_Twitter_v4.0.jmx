@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath">D:\Application Tools\sqljdbc_8.2.0.0_enu\sqljdbc4-2.0.jar\sqljdbc4-2.0.jar</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="UI Twitter" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="01). Sign up" enabled="false"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="Signup_name" elementType="Argument">
+                <stringProp name="Argument.name">Signup_name</stringProp>
+                <stringProp name="Argument.value">dianpermana123456</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+              <elementProp name="Signup_phonenumber" elementType="Argument">
+                <stringProp name="Argument.name">Signup_phonenumber</stringProp>
+                <stringProp name="Argument.value">08XXXXX</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+              <elementProp name="Signup_bulan" elementType="Argument">
+                <stringProp name="Argument.name">Signup_bulan</stringProp>
+                <stringProp name="Argument.value">March</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+              <elementProp name="Signup_hari" elementType="Argument">
+                <stringProp name="Argument.name">Signup_hari</stringProp>
+                <stringProp name="Argument.value">12</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+              <elementProp name="Signup_tahun" elementType="Argument">
+                <stringProp name="Argument.name">Signup_tahun</stringProp>
+                <stringProp name="Argument.value">1990</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+              <elementProp name="Signup_OTP" elementType="Argument">
+                <stringProp name="Argument.name">Signup_OTP</stringProp>
+                <stringProp name="Argument.value">123456</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <stringProp name="WebDriverConfig.proxy_type">DIRECT</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <stringProp name="ChromeDriverConfig.chromedriver_path">D:\Automation\ESB BRIMO\chromedriver_win32\chromedriver_win32\chromedriver.exe</stringProp>
+            <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.incognito_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.no_sandbox_enabled">false</boolProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="[+] Succesfully Login" enabled="false"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="[+] Signup Succesfully" enabled="true">
+              <stringProp name="TestPlan.comments">Username = True, Password = True</stringProp>
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui,org.openqa.selenium.support.events.EventFiringWebDriver); //WebDriver classes
+
+var wait = new pkg.WebDriverWait(WDS.browser, 1500)// WebDriver wait
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+
+//open browser
+WDS.browser.get(&apos;https://twitter.com/signup&apos;);
+
+//Page : input username, password, TTL
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;name&apos;)));
+var name = WDS.browser.findElement(pkg.By.name(&apos;name&apos;)); 
+name.click(); 
+name.clear(); 
+name.sendKeys([&apos;${Signup_name}&apos;]);
+
+var phone_number = WDS.browser.findElement(pkg.By.name(&apos;phone_number&apos;)); 
+phone_number.clear(); 
+phone_number.sendKeys([&apos;${Signup_phonenumber}&apos;]);
+
+//Pilih Bulan
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_1&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_bulan}&apos;); 
+
+//Pilih Tanggal 
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_2&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_hari}&apos;); 
+
+//Pilih Tahun
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_3&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_tahun}&apos;); 
+
+
+//Click Next
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div&apos;)));
+var BtnNext = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div&apos;)); 
+BtnNext.click();
+
+
+//Customize your experience
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/span/span&apos;)));
+var layer = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/span/span&apos;)); 
+layer.click();
+java.lang.Thread.sleep(3000);
+
+
+//Create your account, Click Next 3 of 5
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[5]&apos;)));
+var BtnNext3 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[5]&apos;)); 
+BtnNext3.click();
+
+
+// Vefify phone Pop-up
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[3]/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]&apos;)));
+var BtnNext4 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[3]/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]&apos;)); 
+BtnNext4.click();
+java.lang.Thread.sleep(5000);
+
+//we send you code : 1123XXX and then Next
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;verfication_code&apos;)));
+var TxtCode = WDS.browser.findElement(pkg.By.name(&apos;verfication_code&apos;)); 
+TxtCode.click();
+TxtCode.clear();
+phone_number.sendKeys([&apos;123456&apos;]);
+
+
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div&apos;)));
+var BtnNextSendcode = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div&apos;)); 
+BtnNextSendcode.click();
+
+
+//Page input_password
+//input &amp; next
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div/label/div/div[2]/div/input&apos;)));
+var Btn_input_password = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div/label/div/div[2]/div/input&apos;)); 
+Btn_input_password.sendKeys([&apos;Qwerty123qwerty&apos;]);
+
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div&apos;)));
+var Btn_input_password1 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div&apos;)); 
+Btn_input_password1.click();
+
+
+//pickprofile : skip for now
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div&apos;)));
+var pickprofile = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div&apos;)); 
+pickprofile.click();
+
+
+// inputbio : skip for now
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div[2]/div[2]/div[3]/div/div&apos;)));
+var inputbio = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div[2]/div[2]/div[3]/div/div&apos;)); 
+inputbio.click();
+
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="[-] Failed Sign up" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="[-] Signup Failed : Phonenumer Already used" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui,org.openqa.selenium.support.events.EventFiringWebDriver); //WebDriver classes
+
+var wait = new pkg.WebDriverWait(WDS.browser, 1500)// WebDriver wait
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+
+//open browser
+WDS.browser.get(&apos;https://twitter.com/signup&apos;);
+
+//Page : input username, password, TTL
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;name&apos;)));
+var name = WDS.browser.findElement(pkg.By.name(&apos;name&apos;)); 
+name.click(); 
+name.clear(); 
+name.sendKeys([&apos;${Signup_name}&apos;]);
+
+var phone_number = WDS.browser.findElement(pkg.By.name(&apos;phone_number&apos;)); 
+phone_number.clear(); 
+phone_number.sendKeys([&apos;${Signup_phonenumber}&apos;]);
+
+//Pilih Bulan
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_1&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_bulan}&apos;); 
+
+//Pilih Tanggal 
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_2&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_hari}&apos;); 
+
+//Pilih Tahun
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_3&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_tahun}&apos;); 
+
+
+//Click Next
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div&apos;)));
+var BtnNext = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div&apos;)); 
+BtnNext.click();
+
+
+//Customize your experience
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/span/span&apos;)));
+var layer = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/span/span&apos;)); 
+layer.click();
+java.lang.Thread.sleep(3000);
+
+
+//Create your account, Click Next 3 of 5
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[5]&apos;)));
+var BtnNext3 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[5]&apos;)); 
+BtnNext3.click();
+
+
+// Vefify phone Pop-up
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[3]/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]&apos;)));
+var BtnNext4 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[3]/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]&apos;)); 
+BtnNext4.click();
+java.lang.Thread.sleep(5000);
+
+WDS.sampleResult.sampleEnd();
+
+
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="[-] Signup Failed : You have hit the limit for SMS codes" enabled="false">
+              <stringProp name="TestPlan.comments">Username = False, Password = True</stringProp>
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui,org.openqa.selenium.support.events.EventFiringWebDriver); //WebDriver classes
+
+var wait = new pkg.WebDriverWait(WDS.browser, 1500)// WebDriver wait
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+
+//open browser
+WDS.browser.get(&apos;https://twitter.com/signup&apos;);
+
+//Page : input username, password, TTL
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;name&apos;)));
+var name = WDS.browser.findElement(pkg.By.name(&apos;name&apos;)); 
+name.click(); 
+name.clear(); 
+name.sendKeys([&apos;${Signup_name}&apos;]);
+
+var phone_number = WDS.browser.findElement(pkg.By.name(&apos;phone_number&apos;)); 
+phone_number.clear(); 
+phone_number.sendKeys([&apos;${Signup_phonenumber}&apos;]);
+
+//Pilih Bulan
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_1&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_bulan}&apos;); 
+
+//Pilih Tanggal 
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_2&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_hari}&apos;); 
+
+//Pilih Tahun
+var element = WDS.browser.findElement(org.openqa.selenium.By.id(&apos;SELECTOR_3&apos;))
+var select = new org.openqa.selenium.support.ui.Select(element)
+select.selectByVisibleText(&apos;${Signup_tahun}&apos;); 
+
+
+//Click Next
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div&apos;)));
+var BtnNext = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div&apos;)); 
+BtnNext.click();
+
+
+//Customize your experience
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/span/span&apos;)));
+var layer = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/span/span&apos;)); 
+layer.click();
+java.lang.Thread.sleep(3000);
+
+
+//Create your account, Click Next 3 of 5
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[5]&apos;)));
+var BtnNext3 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[5]&apos;)); 
+BtnNext3.click();
+
+
+// Vefify phone Pop-up
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[3]/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]&apos;)));
+var BtnNext4 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[3]/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]&apos;)); 
+BtnNext4.click();
+java.lang.Thread.sleep(5000);
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="02). Login" enabled="true"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="Username" elementType="Argument">
+                <stringProp name="Argument.name">Username</stringProp>
+                <stringProp name="Argument.value">permana.XXXXXXX</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+              <elementProp name="Password" elementType="Argument">
+                <stringProp name="Argument.name">Password</stringProp>
+                <stringProp name="Argument.value">XXXXXXXXXX</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <stringProp name="WebDriverConfig.proxy_type">DIRECT</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <stringProp name="ChromeDriverConfig.chromedriver_path">D:\Automation\ESB BRIMO\chromedriver_win32\chromedriver_win32\chromedriver.exe</stringProp>
+            <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.incognito_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.no_sandbox_enabled">false</boolProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="[+] Succesfully Login" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="[+] Login Succesfully" enabled="true">
+              <stringProp name="TestPlan.comments">Username = True, Password = True</stringProp>
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui,org.openqa.selenium.support.events.EventFiringWebDriver); //WebDriver classes
+
+var wait = new pkg.WebDriverWait(WDS.browser, 1500)// WebDriver wait
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+
+//open browser
+WDS.browser.get(&apos;https://twitter.com/login&apos;);
+
+//input username
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[username_or_email]&apos;)));
+var username = WDS.browser.findElement(pkg.By.name(&apos;session[username_or_email]&apos;)); 
+username.click(); 
+username.clear(); 
+username.sendKeys([&apos;${Username}&apos;]);
+
+//input password
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[password]&apos;)));
+var password = WDS.browser.findElement(pkg.By.name(&apos;session[password]&apos;)); 
+password.clear();
+password.sendKeys([&apos;${Password}&apos;]);
+
+//click button login
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;)));
+var btnlogin = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;));
+btnlogin.click();
+
+//input text
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div/div/div/div&apos;)));
+
+//Click button Logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;)));
+var btnlogout = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;));
+btnlogout.click();
+
+
+//Click button Logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;)));
+var btnlogout1 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;));
+btnlogout1.click();
+
+//Click verify button logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;)));
+var btnvrfylogout = WDS.browser.findElement(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;));
+btnvrfylogout.click();
+
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="[-] Failed Login" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="[-] Login Failed : Username false" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui,org.openqa.selenium.support.events.EventFiringWebDriver); //WebDriver classes
+
+var wait = new pkg.WebDriverWait(WDS.browser, 1500)// WebDriver wait
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+
+//open browser
+WDS.browser.get(&apos;https://twitter.com/login&apos;);
+
+//input username
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[username_or_email]&apos;)));
+var username = WDS.browser.findElement(pkg.By.name(&apos;session[username_or_email]&apos;)); 
+username.click(); 
+username.clear(); 
+username.sendKeys([&apos;${Username}1&apos;]); // as you can see I add &quot;1&quot; that will be failed
+
+//input password
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[password]&apos;)));
+var password = WDS.browser.findElement(pkg.By.name(&apos;session[password]&apos;)); 
+password.clear(); 
+password.sendKeys([&apos;${Password}&apos;]);
+
+//click button login
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;)));
+var btnlogin = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;));
+btnlogin.click();
+
+//input text
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div/div/div/div&apos;)));
+
+//Click button Logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;)));
+var btnlogout = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;));
+btnlogout.click();
+
+
+//Click button Logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;)));
+var btnlogout1 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;));
+btnlogout1.click();
+
+//Click verify button logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;)));
+var btnvrfylogout = WDS.browser.findElement(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;));
+btnvrfylogout.click();
+
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="[-] Login Failed : Password false" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui,org.openqa.selenium.support.events.EventFiringWebDriver); //WebDriver classes
+
+var wait = new pkg.WebDriverWait(WDS.browser, 1500)// WebDriver wait
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+
+//open browser
+WDS.browser.get(&apos;https://twitter.com/login&apos;);
+
+//input username
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[username_or_email]&apos;)));
+var username = WDS.browser.findElement(pkg.By.name(&apos;session[username_or_email]&apos;)); 
+username.click(); 
+username.clear(); 
+username.sendKeys([&apos;${Username}&apos;]);
+
+//input password
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[password]&apos;)));
+var password = WDS.browser.findElement(pkg.By.name(&apos;session[password]&apos;)); 
+password.clear(); 
+password.sendKeys([&apos;${Password}1&apos;]);
+
+//click button login
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;)));
+var btnlogin = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;));
+btnlogin.click();
+
+//input text
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div/div/div/div&apos;)));
+
+//Click button Logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;)));
+var btnlogout = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;));
+btnlogout.click();
+
+
+//Click button Logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;)));
+var btnlogout1 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;));
+btnlogout1.click();
+
+//Click verify button logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;)));
+var btnvrfylogout = WDS.browser.findElement(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;));
+btnvrfylogout.click();
+
+
+WDS.sampleResult.sampleEnd()</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="03). Twitte Text &amp; Image" enabled="true"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="Username" elementType="Argument">
+                <stringProp name="Argument.name">Username</stringProp>
+                <stringProp name="Argument.value">permana.XXXXXXX</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+              <elementProp name="Password" elementType="Argument">
+                <stringProp name="Argument.name">Password</stringProp>
+                <stringProp name="Argument.value">XXXXXXXXXX</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">True</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+            <stringProp name="WebDriverConfig.proxy_type">DIRECT</stringProp>
+            <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+            <stringProp name="WebDriverConfig.http_host"></stringProp>
+            <intProp name="WebDriverConfig.http_port">8080</intProp>
+            <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+            <stringProp name="WebDriverConfig.https_host"></stringProp>
+            <intProp name="WebDriverConfig.https_port">8080</intProp>
+            <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+            <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+            <stringProp name="WebDriverConfig.socks_host"></stringProp>
+            <intProp name="WebDriverConfig.socks_port">8080</intProp>
+            <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+            <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+            <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+            <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+            <stringProp name="ChromeDriverConfig.chromedriver_path">D:\AvanaIndonesia\chromedriver_win32\chromedriver.exe</stringProp>
+            <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.incognito_enabled">false</boolProp>
+            <boolProp name="ChromeDriverConfig.no_sandbox_enabled">false</boolProp>
+          </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="[+] Succesfully twitte Text &amp; image" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="[+] Say &quot;Hallo&quot;, Haiii" enabled="true">
+              <stringProp name="TestPlan.comments">Username = True, Password = True</stringProp>
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui,org.openqa.selenium.support.events.EventFiringWebDriver);
+var wait = new pkg.WebDriverWait(WDS.browser, 150)// WebDriver wait
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+//get url
+WDS.browser.get(&apos;https://twitter.com/login&apos;);
+
+//input username
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[username_or_email]&apos;)));
+var username = WDS.browser.findElement(pkg.By.name(&apos;session[username_or_email]&apos;)); 
+username.click(); 
+username.clear(); 
+username.sendKeys([&apos;${Username}&apos;]);
+
+//input password
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[password]&apos;)));
+var password = WDS.browser.findElement(pkg.By.name(&apos;session[password]&apos;)); 
+password.clear(); 
+password.sendKeys([&apos;${Password}&apos;]);
+
+//click button login
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;)));
+var btnlogin = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;));
+btnlogin.click();
+
+
+//Input text
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div/div/div/div&apos;)));
+var writetext = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div/div/div/div&apos;)); 
+writetext.sendKeys([&apos;Say Hallo, Haiii&apos;]);
+
+
+//clik twiter
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div[3]/div/span/span&apos;)));
+var Twitte = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div[3]/div/span/span&apos;)); 
+Twitte.click();
+
+
+//logout
+//wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;///*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;)));
+var btnlogout = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;));
+btnlogout.click();
+
+//logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;)));
+var btnlogout1 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;));
+btnlogout1.click();
+
+//verify logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;)));
+var btnvrfylogout = WDS.browser.findElement(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;));
+btnvrfylogout.click();
+
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="[+] Upload Image Succesfully" enabled="false">
+              <stringProp name="TestPlan.comments">Username = True, Password = True</stringProp>
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui,org.openqa.selenium.support.events.EventFiringWebDriver,  org.openqa.selenium.WebElement);
+var wait = new pkg.WebDriverWait(WDS.browser, 150)// WebDriver wait
+
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+//get url
+WDS.browser.get(&apos;https://twitter.com/login&apos;);
+
+//input username
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[username_or_email]&apos;)));
+var username = WDS.browser.findElement(pkg.By.name(&apos;session[username_or_email]&apos;)); 
+username.click(); 
+username.clear(); 
+username.sendKeys([&apos;${Username}&apos;]);
+
+//input password
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&apos;session[password]&apos;)));
+var password = WDS.browser.findElement(pkg.By.name(&apos;session[password]&apos;)); 
+password.clear(); 
+password.sendKeys([&apos;${Password}&apos;]);
+
+//click button login
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;)));
+var btnlogin = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div/div&apos;));
+btnlogin.click();
+
+//Input text
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div/div/div/div&apos;)));
+
+
+//Input Image
+//wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[1]/div[1]/div&apos;)));
+var writeimages = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[1]/div[1]/div&apos;)); 
+writeimages.click();
+//java.lang.Thread.sleep(50000);
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div[3]/div/span/span&apos;)));
+//writeimages.sendKeys([&apos;D:\\AvanaIndonesia\\Indonesia_Large_Flag_20cmx15cm.png&apos;]);
+
+
+
+//clik twiter
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div[3]/div/span/span&apos;)));
+var Twitte = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div[3]/div/span/span&apos;)); 
+Twitte.click();
+
+
+//logout
+//wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;///*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;)));
+var btnlogout = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;react-root&quot;]/div/div/div[2]/header/div/div/div/div[2]/div/div/div/div/div[2]&apos;));
+btnlogout.click();
+
+//logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;)));
+var btnlogout1 = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;layers&quot;]/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/a[2]/div[1]/div&apos;));
+btnlogout1.click();
+
+//verify logout
+wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;)));
+var btnvrfylogout = WDS.browser.findElement(pkg.By.cssSelector(&apos;div.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-37j5jr.r-ubezar.r-b88u0q.r-1777fci.r-rjixqe.r-bcqeeo.r-q4m81j.r-qvutc0&apos;));
+btnvrfylogout.click();
+
+
+WDS.sampleResult.sampleEnd();</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
