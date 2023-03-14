@@ -1,17 +1,3 @@
-Just one file can run test automation make it simple.
+Selenium on Jmeter for automations
 
-All detail can be check here : https://medium.com/@permana.dian2012/twitter-automation-using-jmeter-4217803259e7
-
-Open Jmeter
-- Input All parameter in username varibale
-
-Run jmeter 
-- Check results
-
-Analysis
-
-
-Tech stuck : 
-- Jmeter 5.2
-- Install plugin Selenium Jmeter
-- Chromedriver Version 92.0.4515.131 
+All detail result report can be check here : https://medium.com/@permana.dian2012/twitter-automation-using-jmeter-4217803259e7
